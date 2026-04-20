@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nik Naks Simbas | Contact & Crunchy Connections</title>
+    <!-- Google Fonts + Font Awesome 6 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fef6e8;
+            background-image: radial-gradient(circle at 10% 20%, rgba(245, 200, 120, 0.08) 0%, rgba(255, 140, 50, 0.03) 90%);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+        }
+
+        /* main container */
+        .contact-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* hero / brand bar */
+        .brand-bar {
+            background: linear-gradient(115deg, #E05A2A 0%, #C13B1A 100%);
+            padding: 1.4rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo span {
+            background: rgba(255,215,0,0.25);
+            padding: 6px 12px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .tagline-badge {
+            background: rgba(255,255,240,0.2);
+            backdrop-filter: blur(4px);
+            padding: 8px 18px;
+            border-radius: 60px;
+            color: #FFF2DF;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        /* two column layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 0;
+        }
+
+        /* left side - info & details */
+        .info-panel {
+            background: #FFF9F2;
+            padding: 2.2rem 2rem;
+            border-right: 1px solid #f0e2d4;
+        }
+
+        .info-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #2c221a;
+            margin-bottom: 1rem;
+        }
+
+        .info-desc {
+            color: #5e4b38;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-details {
+            margin: 1.8rem 0 2rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-icon {
+            width: 44px;
+            height: 44px;
+            background: #FCE6D8;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #E05A2A;
+            font-size: 1.2rem;
+        }
+
+        .detail-text h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2c221a;
+        }
+
+        .detail-text p {
+            font-size: 0.9rem;
+            color: #77634b;
+            margin-top: 4px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            background: #f1e4d8;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C13B1A;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: #E05A2A;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .business-hours {
+            margin-top: 2rem;
+            background: #fff2e6;
+            padding: 1rem 1.2rem;
+            border-radius: 1.2rem;
+        }
+
+        .business-hours h4 i {
+            margin-right: 6px;
+            color: #E05A2A;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            color: #4e3a28;
+            font-weight: 500;
+        }
+
+        /* right side form panel */
+        .form-panel {
+            padding: 2.2rem 2rem;
+            background: white;
+        }
+
+        .form-header {
+            margin-bottom: 1.6rem;
+        }
+
+        .form-header h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #2c221a;
+        }
+
+        .form-header p {
+            color: #7c6852;
+            font-size: 0.85rem;
+            margin-top: 6px;
+        }
+
+        .input-group {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #3b2c1f;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .required {
+            color: #E05A2A;
+            font-size: 0.7rem;
+        }
+
+        input, textarea, select {
+            font-family: 'Inter', sans-serif;
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1.5px solid #f0e0d2;
+            border-radius: 1rem;
+            background: #FEFCF8;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            outline: none;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #E05A2A;
+            box-shadow: 0 0 0 3px rgba(224, 90, 42, 0.15);
+            background: white;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .error-message {
+            font-size: 0.7rem;
+            color: #d9534f;
+            margin-top: 5px;
+            margin-left: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .input-group.error input,
+        .input-group.error textarea,
+        .input-group.error select {
+            border-color: #d9534f;
+            background: #fff8f8;
+        }
+
+        .success-banner {
+            background: #e9f7e6;
+            border-radius: 1rem;
+            padding: 0.9rem 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 4px solid #2e7d32;
+            color: #1e4a2a;
+            font-weight: 500;
+            font-size: 0.85rem;
+            animation: fadeUp 0.3s ease;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn-submit {
+            background: linear-gradient(100deg, #E05A2A, #C13B1A);
+            border: none;
+            padding: 0.9rem 1.4rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            box-shadow: 0 6px 14px rgba(193, 59, 26, 0.25);
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(100deg, #c44c24, #a53215);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px rgba(193, 59, 26, 0.3);
+        }
+
+        .btn-reset {
+            background: #f2ece5;
+            border: 1px solid #e2d4c8;
+            padding: 0.8rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #5b4a38;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 0.8rem;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-reset:hover {
+            background: #e7ddd2;
+            border-color: #cfc0b2;
+        }
+
+        .note {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 1.2rem;
+            color: #aa967f;
+        }
+
+        @media (max-width: 860px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-panel {
+                border-right: none;
+                border-bottom: 1px solid #f0e2d4;
+            }
+            .brand-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .tagline-badge {
+                align-self: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-wrapper {
+                border-radius: 1.5rem;
+            }
+            .info-panel, .form-panel {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="contact-wrapper">
+    <div class="brand-bar">
+        <div class="logo">
+            <h2><i class="fas fa-paw"></i> Nik Naks Simbas <span>since 2020</span></h2>
+        </div>
+        <div class="tagline-badge">
+            <i class="fas fa-crown"></i> Crunchy & bold — the Simba spirit
+        </div>
+    </div>
+
+    <div class="contact-grid">
+        <!-- LEFT: Business contact info -->
+        <div class="info-panel">
+            <div class="info-title">Let’s connect 🦁</div>
+            <div class="info-desc">
+                Have a question about our snacks, wholesale orders, or want to collaborate with the Simbas crew? 
+                Reach out – we reply within a day.
+            </div>
+            <div class="contact-details">
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="detail-text">
+                        <h4>Nik Naks Simbas Hub</h4>
+                        <p>123 Crunchy Lane, Nairobi / snack district</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="detail-text">
+                        <h4>Call or WhatsApp</h4>
+                        <p>+254 700 123 456 <span style="font-size:0.7rem;">(business hours)</span></p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="detail-text">
+                        <h4>Email us</h4>
+                        <p>hello@niknakssimbas.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="business-hours">
+                <h4><i class="far fa-clock"></i> Simbas service hours</h4>
+                <div class="hours-row"><span>Mon – Fri</span><span>9:00 AM – 6:00 PM</span></div>
+                <div class="hours-row"><span>Saturday</span><span>10:00 AM – 4:00 PM</span></div>
+                <div class="hours-row"><span>Sunday</span><span>Closed (but online orders open)</span></div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Contact form -->
+        <div class="form-panel">
+            <div class="form-header">
+                <h3>Send a message</h3>
+                <p>We’d love to hear from you — fill the form and we’ll get back soon.</p>
+            </div>
+
+            <!-- success alert -->
+            <div id="successMessage" class="success-banner" style="display: none;">
+                <i class="fas fa-check-circle fa-lg"></i>
+                <span id="successText">Thanks! Your message has been delivered to the Simbas team. We'll reply soon 🍿</span>
+            </div>
+
+            <form id="contactForm" novalidate>
+                <div class="input-group" id="nameGroup">
+                    <label><i class="fas fa-user"></i> Full name <span class="required">*</span></label>
+                    <input type="text" id="fullName" placeholder="e.g., Alex Simba">
+                    <div class="error-message" id="nameError"></div>
+                </div>
+
+                <div class="input-group" id="emailGroup">
+                    <label><i class="fas fa-envelope"></i> Email address <span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="hello@example.com">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="input-group" id="phoneGroup">
+                    <label><i class="fas fa-mobile-alt"></i> Phone number <span style="font-weight:400;">(optional)</span></label>
+                    <input type="tel" id="phone" placeholder="+254 7XX XXX XXX">
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+
+                <div class="input-group" id="subjectGroup">
+                    <label><i class="fas fa-tag"></i> Subject <span class="required">*</span></label>
+                    <select id="subjectSelect">
+                        <option value="" disabled selected>– Select enquiry type –</option>
+                        <option value="General question">💬 General question</option>
+                        <option value="Wholesale / bulk">📦 Wholesale / bulk order</option>
+                        <option value="Product feedback">🍿 Product feedback</option>
+                        <option value="Partnership">🤝 Partnership or event</option>
+                        <option value="Other">✨ Other</option>
+                    </select>
+                    <div class="error-message" id="subjectError"></div>
+                </div>
+
+                <div class="input-group" id="messageGroup">
+                    <label><i class="fas fa-comment"></i> Message <span class="required">*</span></label>
+                    <textarea id="message" placeholder="Tell us about your enquiry, flavour ideas, or order details..."></textarea>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+
+                <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send message</button>
+                <button type="button" id="clearFormBtn" class="btn-reset"><i class="fas fa-redo-alt"></i> Clear form</button>
+                <div class="note">
+                    <i class="fas fa-lock"></i> Your info is safe — no spam, only crunchy updates.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // DOM elements
+        const form = document.getElementById('contactForm');
+        const fullName = document.getElementById('fullName');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const subjectSelect = document.getElementById('subjectSelect');
+        const message = document.getElementById('message');
+        const clearBtn = document.getElementById('clearFormBtn');
+        const successDiv = document.getElementById('successMessage');
+        const successTextSpan = document.getElementById('successText');
+
+        // Error spans
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const phoneError = document.getElementById('phoneError');
+        const subjectError = document.getElementById('subjectError');
+        const messageError = document.getElementById('messageError');
+
+        // Helper: remove error style
+        function clearFieldError(groupId, errorSpan) {
+            const group = document.getElementById(groupId);
+            if (group) group.classList.remove('error');
+            if (errorSpan) errorSpan.innerHTML = '';
+        }
+
+        function setFieldError(groupId, errorSpan, messageText) {
+            const group = document.getElementById(groupId);
+            if (group) group.classList.add('error');
+            if (errorSpan) {
+                errorSpan.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${messageText}`;
+            }
+        }
+
+        // Hide success banner
+        function hideSuccess() {
+            if (successDiv) successDiv.style.display = 'none';
+        }
+
+        function showSuccess(customMsg = null) {
+            const msg = customMsg || "📬 Message sent! The Nik Naks Simbas team will reply within 24h. Stay crunchy!";
+            successTextSpan.innerText = msg;
+            successDiv.style.display = 'flex';
+            successDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            // auto hide after 6 seconds (optional but user-friendly)
+            setTimeout(() => {
+                if (successDiv.style.display === 'flex') {
+                    // keep visible until new submit, but we can hide after 7 sec? not mandatory but nice.
+                }
+            }, 7000);
+        }
+
+        // Validations
+        function validateName() {
+            const nameVal = fullName.value.trim();
+            if (nameVal === '') {
+                setFieldError('nameGroup', nameError, 'Full name is required');
+                return false;
+            }
+            if (nameVal.length < 2) {
+                setFieldError('nameGroup', nameError, 'Enter a valid name (min 2 characters)');
+                return false;
+            }
+            clearFieldError('nameGroup', nameError);
+            return true;
+        }
+
+        function validateEmail() {
+            const emailVal = email.value.trim();
+            if (emailVal === '') {
+                setFieldError('emailGroup', emailError, 'Email address is required');
+                return false;
+            }
+            const emailRegex = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+            if (!emailRegex.test(emailVal)) {
+                setFieldError('emailGroup', emailError, 'Please enter a valid email (e.g., name@domain.com)');
+                return false;
+            }
+            clearFieldError('emailGroup', emailError);
+            return true;
+        }
+
+        function validatePhone() {
+            const phoneVal = phone.value.trim();
+            if (phoneVal === '') {
+                clearFieldError('phoneGroup', phoneError);
+                return true; // optional field
+            }
+            // relaxed international: digits, spaces, +, -, parentheses, min 6 chars
+            const phoneRegex = /^[\+\d\s\-\(\)]{6,20}$/;
+            if (!phoneRegex.test(phoneVal)) {
+                setFieldError('phoneGroup', phoneError, 'Enter a valid phone number (digits, spaces, +)');
+                return false;
+            }
+            clearFieldError('phoneGroup', phoneError);
+            return true;
+        }
+
+        function validateSubject() {
+            const subj = subjectSelect.value;
+            if (!subj || subj === '') {
+                setFieldError('subjectGroup', subjectError, 'Please select a subject');
+                return false;
+            }
+            clearFieldError('subjectGroup', subjectError);
+            return true;
+        }
+
+        function validateMessage() {
+            const msgVal = message.value.trim();
+            if (msgVal === '') {
+                setFieldError('messageGroup', messageError, 'Message cannot be empty');
+                return false;
+            }
+            if (msgVal.length < 5) {
+                setFieldError('messageGroup', messageError, 'Message must be at least 5 characters');
+                return false;
+            }
+            clearFieldError('messageGroup', messageError);
+            return true;
+        }
+
+        // Full form validation
+        function validateForm() {
+            const isNameOk = validateName();
+            const isEmailOk = validateEmail();
+            const isPhoneOk = validatePhone();
+            const isSubjectOk = validateSubject();
+            const isMessageOk = validateMessage();
+            return isNameOk && isEmailOk && isPhoneOk && isSubjectOk && isMessageOk;
+        }
+
+        // Reset form fields + errors + hide success
+        function resetForm() {
+            form.reset();
+            // manually set select to placeholder
+            subjectSelect.selectedIndex = 0;
+            fullName.value = '';
+            email.value = '';
+            phone.value = '';
+            message.value = '';
+            // clear all error classes & messages
+            const groups = ['nameGroup', 'emailGroup', 'phoneGroup', 'subjectGroup', 'messageGroup'];
+            groups.forEach(groupId => {
+                const groupElem = document.getElementById(groupId);
+                if (groupElem) groupElem.classList.remove('error');
+            });
+            const errors = [nameError, emailError, phoneError, subjectError, messageError];
+            errors.forEach(err => { if (err) err.innerHTML = ''; });
+            hideSuccess();
+        }
+
+        // Submit handler
+        function onSubmit(e) {
+            e.preventDefault();
+            hideSuccess();
+
+            if (!validateForm()) {
+                // scroll to first error
+                const firstError = document.querySelector('.input-group.error');
+                if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            // gather data for simulated success
+            const nameFirst = fullName.value.trim().split(' ')[0];
+            const subjectText = subjectSelect.options[subjectSelect.selectedIndex]?.text || 'enquiry';
+            const customMsg = `🦁 Thanks ${nameFirst}! Your ${subjectText} has been sent to the Simbas crew. We'll crunch back within 24h.`;
+            showSuccess(customMsg);
+            
+            // optionally log to console
+            console.log({
+                name: fullName.value,
+                email: email.value,
+                phone: phone.value,
+                subject: subjectSelect.value,
+                message: message.value
+            });
+            
+            // you can optionally reset after success? but we don't reset automatically to let user see data.
+            // we add a subtle animation feedback
+            const btn = document.querySelector('.btn-submit');
+            btn.style.transform = 'scale(0.98)';
+            setTimeout(() => { btn.style.transform = ''; }, 150);
+        }
+
+        // attach live validation on blur/change
+        function attachLiveEvents() {
+            fullName.addEventListener('blur', validateName);
+            email.addEventListener('blur', validateEmail);
+            phone.addEventListener('blur', validatePhone);
+            subjectSelect.addEventListener('change', validateSubject);
+            message.addEventListener('blur', validateMessage);
+            
+            // clear errors on input (UX)
+            fullName.addEventListener('input', () => clearFieldError('nameGroup', nameError));
+            email.addEventListener('input', () => clearFieldError('emailGroup', emailError));
+            phone.addEventListener('input', () => clearFieldError('phoneGroup', phoneError));
+            subjectSelect.addEventListener('focus', () => clearFieldError('subjectGroup', subjectError));
+            message.addEventListener('input', () => clearFieldError('messageGroup', messageError));
+        }
+
+        // Clear button handler
+        clearBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            resetForm();
+        });
+
+        form.addEventListener('submit', onSubmit);
+        attachLiveEvents();
+        
+        // initial reset to clean state
+        resetForm();
+    })();
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nik Naks Simbas | Contact & Crunchy Connections</title>
+    <!-- Google Fonts + Font Awesome 6 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fef6e8;
+            background-image: radial-gradient(circle at 10% 20%, rgba(245, 200, 120, 0.08) 0%, rgba(255, 140, 50, 0.03) 90%);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+        }
+
+        /* main container */
+        .contact-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* hero / brand bar */
+        .brand-bar {
+            background: linear-gradient(115deg, #E05A2A 0%, #C13B1A 100%);
+            padding: 1.4rem 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo span {
+            background: rgba(255,215,0,0.25);
+            padding: 6px 12px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .tagline-badge {
+            background: rgba(255,255,240,0.2);
+            backdrop-filter: blur(4px);
+            padding: 8px 18px;
+            border-radius: 60px;
+            color: #FFF2DF;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        /* two column layout */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 0;
+        }
+
+        /* left side - info & details */
+        .info-panel {
+            background: #FFF9F2;
+            padding: 2.2rem 2rem;
+            border-right: 1px solid #f0e2d4;
+        }
+
+        .info-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #2c221a;
+            margin-bottom: 1rem;
+        }
+
+        .info-desc {
+            color: #5e4b38;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-details {
+            margin: 1.8rem 0 2rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-icon {
+            width: 44px;
+            height: 44px;
+            background: #FCE6D8;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #E05A2A;
+            font-size: 1.2rem;
+        }
+
+        .detail-text h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #2c221a;
+        }
+
+        .detail-text p {
+            font-size: 0.9rem;
+            color: #77634b;
+            margin-top: 4px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icon {
+            background: #f1e4d8;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C13B1A;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: #E05A2A;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .business-hours {
+            margin-top: 2rem;
+            background: #fff2e6;
+            padding: 1rem 1.2rem;
+            border-radius: 1.2rem;
+        }
+
+        .business-hours h4 i {
+            margin-right: 6px;
+            color: #E05A2A;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            color: #4e3a28;
+            font-weight: 500;
+        }
+
+        /* right side form panel */
+        .form-panel {
+            padding: 2.2rem 2rem;
+            background: white;
+        }
+
+        .form-header {
+            margin-bottom: 1.6rem;
+        }
+
+        .form-header h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #2c221a;
+        }
+
+        .form-header p {
+            color: #7c6852;
+            font-size: 0.85rem;
+            margin-top: 6px;
+        }
+
+        .input-group {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #3b2c1f;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .required {
+            color: #E05A2A;
+            font-size: 0.7rem;
+        }
+
+        input, textarea, select {
+            font-family: 'Inter', sans-serif;
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1.5px solid #f0e0d2;
+            border-radius: 1rem;
+            background: #FEFCF8;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            outline: none;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #E05A2A;
+            box-shadow: 0 0 0 3px rgba(224, 90, 42, 0.15);
+            background: white;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .error-message {
+            font-size: 0.7rem;
+            color: #d9534f;
+            margin-top: 5px;
+            margin-left: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .input-group.error input,
+        .input-group.error textarea,
+        .input-group.error select {
+            border-color: #d9534f;
+            background: #fff8f8;
+        }
+
+        .success-banner {
+            background: #e9f7e6;
+            border-radius: 1rem;
+            padding: 0.9rem 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 4px solid #2e7d32;
+            color: #1e4a2a;
+            font-weight: 500;
+            font-size: 0.85rem;
+            animation: fadeUp 0.3s ease;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn-submit {
+            background: linear-gradient(100deg, #E05A2A, #C13B1A);
+            border: none;
+            padding: 0.9rem 1.4rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+            box-shadow: 0 6px 14px rgba(193, 59, 26, 0.25);
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(100deg, #c44c24, #a53215);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px rgba(193, 59, 26, 0.3);
+        }
+
+        .btn-reset {
+            background: #f2ece5;
+            border: 1px solid #e2d4c8;
+            padding: 0.8rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #5b4a38;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 0.8rem;
+            transition: 0.2s;
+            font-family: inherit;
+        }
+
+        .btn-reset:hover {
+            background: #e7ddd2;
+            border-color: #cfc0b2;
+        }
+
+        .note {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 1.2rem;
+            color: #aa967f;
+        }
+
+        @media (max-width: 860px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-panel {
+                border-right: none;
+                border-bottom: 1px solid #f0e2d4;
+            }
+            .brand-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .tagline-badge {
+                align-self: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-wrapper {
+                border-radius: 1.5rem;
+            }
+            .info-panel, .form-panel {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="contact-wrapper">
+    <div class="brand-bar">
+        <div class="logo">
+            <h2><i class="fas fa-paw"></i> Nik Naks Simbas <span>since 2020</span></h2>
+        </div>
+        <div class="tagline-badge">
+            <i class="fas fa-crown"></i> Crunchy & bold — the Simba spirit
+        </div>
+    </div>
+
+    <div class="contact-grid">
+        <!-- LEFT: Business contact info -->
+        <div class="info-panel">
+            <div class="info-title">Let’s connect 🦁</div>
+            <div class="info-desc">
+                Have a question about our snacks, wholesale orders, or want to collaborate with the Simbas crew? 
+                Reach out – we reply within a day.
+            </div>
+            <div class="contact-details">
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="detail-text">
+                        <h4>Nik Naks Simbas Hub</h4>
+                        <p>123 Crunchy Lane, Nairobi / snack district</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="detail-text">
+                        <h4>Call or WhatsApp</h4>
+                        <p>+254 700 123 456 <span style="font-size:0.7rem;">(business hours)</span></p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="detail-text">
+                        <h4>Email us</h4>
+                        <p>hello@niknakssimbas.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="business-hours">
+                <h4><i class="far fa-clock"></i> Simbas service hours</h4>
+                <div class="hours-row"><span>Mon – Fri</span><span>9:00 AM – 6:00 PM</span></div>
+                <div class="hours-row"><span>Saturday</span><span>10:00 AM – 4:00 PM</span></div>
+                <div class="hours-row"><span>Sunday</span><span>Closed (but online orders open)</span></div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Contact form -->
+        <div class="form-panel">
+            <div class="form-header">
+                <h3>Send a message</h3>
+                <p>We’d love to hear from you — fill the form and we’ll get back soon.</p>
+            </div>
+
+            <!-- success alert -->
+            <div id="successMessage" class="success-banner" style="display: none;">
+                <i class="fas fa-check-circle fa-lg"></i>
+                <span id="successText">Thanks! Your message has been delivered to the Simbas team. We'll reply soon 🍿</span>
+            </div>
+
+            <form id="contactForm" novalidate>
+                <div class="input-group" id="nameGroup">
+                    <label><i class="fas fa-user"></i> Full name <span class="required">*</span></label>
+                    <input type="text" id="fullName" placeholder="e.g., Alex Simba">
+                    <div class="error-message" id="nameError"></div>
+                </div>
+
+                <div class="input-group" id="emailGroup">
+                    <label><i class="fas fa-envelope"></i> Email address <span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="hello@example.com">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="input-group" id="phoneGroup">
+                    <label><i class="fas fa-mobile-alt"></i> Phone number <span style="font-weight:400;">(optional)</span></label>
+                    <input type="tel" id="phone" placeholder="+254 7XX XXX XXX">
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+
+                <div class="input-group" id="subjectGroup">
+                    <label><i class="fas fa-tag"></i> Subject <span class="required">*</span></label>
+                    <select id="subjectSelect">
+                        <option value="" disabled selected>– Select enquiry type –</option>
+                        <option value="General question">💬 General question</option>
+                        <option value="Wholesale / bulk">📦 Wholesale / bulk order</option>
+                        <option value="Product feedback">🍿 Product feedback</option>
+                        <option value="Partnership">🤝 Partnership or event</option>
+                        <option value="Other">✨ Other</option>
+                    </select>
+                    <div class="error-message" id="subjectError"></div>
+                </div>
+
+                <div class="input-group" id="messageGroup">
+                    <label><i class="fas fa-comment"></i> Message <span class="required">*</span></label>
+                    <textarea id="message" placeholder="Tell us about your enquiry, flavour ideas, or order details..."></textarea>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+
+                <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send message</button>
+                <button type="button" id="clearFormBtn" class="btn-reset"><i class="fas fa-redo-alt"></i> Clear form</button>
+                <div class="note">
+                    <i class="fas fa-lock"></i> Your info is safe — no spam, only crunchy updates.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        // DOM elements
+        const form = document.getElementById('contactForm');
+        const fullName = document.getElementById('fullName');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const subjectSelect = document.getElementById('subjectSelect');
+        const message = document.getElementById('message');
+        const clearBtn = document.getElementById('clearFormBtn');
+        const successDiv = document.getElementById('successMessage');
+        const successTextSpan = document.getElementById('successText');
+
+        // Error spans
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+        const phoneError = document.getElementById('phoneError');
+        const subjectError = document.getElementById('subjectError');
+        const messageError = document.getElementById('messageError');
+
+        // Helper: remove error style
+        function clearFieldError(groupId, errorSpan) {
+            const group = document.getElementById(groupId);
+            if (group) group.classList.remove('error');
+            if (errorSpan) errorSpan.innerHTML = '';
+        }
+
+        function setFieldError(groupId, errorSpan, messageText) {
+            const group = document.getElementById(groupId);
+            if (group) group.classList.add('error');
+            if (errorSpan) {
+                errorSpan.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${messageText}`;
+            }
+        }
+
+        // Hide success banner
+        function hideSuccess() {
+            if (successDiv) successDiv.style.display = 'none';
+        }
+
+        function showSuccess(customMsg = null) {
+            const msg = customMsg || "📬 Message sent! The Nik Naks Simbas team will reply within 24h. Stay crunchy!";
+            successTextSpan.innerText = msg;
+            successDiv.style.display = 'flex';
+            successDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            // auto hide after 6 seconds (optional but user-friendly)
+            setTimeout(() => {
+                if (successDiv.style.display === 'flex') {
+                    // keep visible until new submit, but we can hide after 7 sec? not mandatory but nice.
+                }
+            }, 7000);
+        }
+
+        // Validations
+        function validateName() {
+            const nameVal = fullName.value.trim();
+            if (nameVal === '') {
+                setFieldError('nameGroup', nameError, 'Full name is required');
+                return false;
+            }
+            if (nameVal.length < 2) {
+                setFieldError('nameGroup', nameError, 'Enter a valid name (min 2 characters)');
+                return false;
+            }
+            clearFieldError('nameGroup', nameError);
+            return true;
+        }
+
+        function validateEmail() {
+            const emailVal = email.value.trim();
+            if (emailVal === '') {
+                setFieldError('emailGroup', emailError, 'Email address is required');
+                return false;
+            }
+            const emailRegex = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+            if (!emailRegex.test(emailVal)) {
+                setFieldError('emailGroup', emailError, 'Please enter a valid email (e.g., name@domain.com)');
+                return false;
+            }
+            clearFieldError('emailGroup', emailError);
+            return true;
+        }
+
+        function validatePhone() {
+            const phoneVal = phone.value.trim();
+            if (phoneVal === '') {
+                clearFieldError('phoneGroup', phoneError);
+                return true; // optional field
+            }
+            // relaxed international: digits, spaces, +, -, parentheses, min 6 chars
+            const phoneRegex = /^[\+\d\s\-\(\)]{6,20}$/;
+            if (!phoneRegex.test(phoneVal)) {
+                setFieldError('phoneGroup', phoneError, 'Enter a valid phone number (digits, spaces, +)');
+                return false;
+            }
+            clearFieldError('phoneGroup', phoneError);
+            return true;
+        }
+
+        function validateSubject() {
+            const subj = subjectSelect.value;
+            if (!subj || subj === '') {
+                setFieldError('subjectGroup', subjectError, 'Please select a subject');
+                return false;
+            }
+            clearFieldError('subjectGroup', subjectError);
+            return true;
+        }
+
+        function validateMessage() {
+            const msgVal = message.value.trim();
+            if (msgVal === '') {
+                setFieldError('messageGroup', messageError, 'Message cannot be empty');
+                return false;
+            }
+            if (msgVal.length < 5) {
+                setFieldError('messageGroup', messageError, 'Message must be at least 5 characters');
+                return false;
+            }
+            clearFieldError('messageGroup', messageError);
+            return true;
+        }
+
+        // Full form validation
+        function validateForm() {
+            const isNameOk = validateName();
+            const isEmailOk = validateEmail();
+            const isPhoneOk = validatePhone();
+            const isSubjectOk = validateSubject();
+            const isMessageOk = validateMessage();
+            return isNameOk && isEmailOk && isPhoneOk && isSubjectOk && isMessageOk;
+        }
+
+        // Reset form fields + errors + hide success
+        function resetForm() {
+            form.reset();
+            // manually set select to placeholder
+            subjectSelect.selectedIndex = 0;
+            fullName.value = '';
+            email.value = '';
+            phone.value = '';
+            message.value = '';
+            // clear all error classes & messages
+            const groups = ['nameGroup', 'emailGroup', 'phoneGroup', 'subjectGroup', 'messageGroup'];
+            groups.forEach(groupId => {
+                const groupElem = document.getElementById(groupId);
+                if (groupElem) groupElem.classList.remove('error');
+            });
+            const errors = [nameError, emailError, phoneError, subjectError, messageError];
+            errors.forEach(err => { if (err) err.innerHTML = ''; });
+            hideSuccess();
+        }
+
+        // Submit handler
+        function onSubmit(e) {
+            e.preventDefault();
+            hideSuccess();
+
+            if (!validateForm()) {
+                // scroll to first error
+                const firstError = document.querySelector('.input-group.error');
+                if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            // gather data for simulated success
+            const nameFirst = fullName.value.trim().split(' ')[0];
+            const subjectText = subjectSelect.options[subjectSelect.selectedIndex]?.text || 'enquiry';
+            const customMsg = `🦁 Thanks ${nameFirst}! Your ${subjectText} has been sent to the Simbas crew. We'll crunch back within 24h.`;
+            showSuccess(customMsg);
+            
+            // optionally log to console
+            console.log({
+                name: fullName.value,
+                email: email.value,
+                phone: phone.value,
+                subject: subjectSelect.value,
+                message: message.value
+            });
+            
+            // you can optionally reset after success? but we don't reset automatically to let user see data.
+            // we add a subtle animation feedback
+            const btn = document.querySelector('.btn-submit');
+            btn.style.transform = 'scale(0.98)';
+            setTimeout(() => { btn.style.transform = ''; }, 150);
+        }
+
+        // attach live validation on blur/change
+        function attachLiveEvents() {
+            fullName.addEventListener('blur', validateName);
+            email.addEventListener('blur', validateEmail);
+            phone.addEventListener('blur', validatePhone);
+            subjectSelect.addEventListener('change', validateSubject);
+            message.addEventListener('blur', validateMessage);
+            
+            // clear errors on input (UX)
+            fullName.addEventListener('input', () => clearFieldError('nameGroup', nameError));
+            email.addEventListener('input', () => clearFieldError('emailGroup', emailError));
+            phone.addEventListener('input', () => clearFieldError('phoneGroup', phoneError));
+            subjectSelect.addEventListener('focus', () => clearFieldError('subjectGroup', subjectError));
+            message.addEventListener('input', () => clearFieldError('messageGroup', messageError));
+        }
+
+        // Clear button handler
+        clearBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            resetForm();
+        });
+
+        form.addEventListener('submit', onSubmit);
+        attachLiveEvents();
+        
+        // initial reset to clean state
+        resetForm();
+    })();
+</script>
+</body>
+</html>
